@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from databaseManager import databaseManager
+import sys
 
 
 # https://www.national.co.uk/tyres-search/205-55-16?pc=S254FF
@@ -9,20 +10,21 @@ from databaseManager import databaseManager
 
 # Needed information: website, brand, pattern, size, season, price
 
-NATIONAL_BASE_URL: str = "https://www.national.co.uk/tyres-search"
+NATIONAL_SEARCH_URL: str = "https://www.national.co.uk/tyres-search"
+BYTHJUL_SEARCH_URL: str = "https://www.bythjul.com/sok/storlek/dack/0/DS/205-55-16"
 SUMMER = "summer"
 WINTER = "winter"
 
 
-def scrape_national(info: tuple) -> list[tuple]:
+def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
     scrape_results = []
     
-    search_url = NATIONAL_BASE_URL + f"/{info[0]}-{info[1]}-{info[2]}"
+    search_url = NATIONAL_SEARCH_URL + f"/{width}-{aspect_ratio}-{rim_size}"
 
     try:
         response = requests.get(search_url)             
     except:
-        return f"GET {search_url} returned error"
+        return None
     
     content = response.content
     soup = BeautifulSoup(content, 'html.parser')
@@ -64,6 +66,14 @@ def scrape_national(info: tuple) -> list[tuple]:
         scrape_results.append(("national.co.uk", brand, pattern, size, seasonality, price))
     return scrape_results
             
-scrape = scrape_national((205, 55, 16))
-for scar in scrape:
-    print(scar[2], scar[4])
+        
+python_file, width, aspect_ratio, rim_size = sys.argv
+scrape = scrape_national(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
+if not scrape:
+    print(f"No search results for Width {width} AR {aspect_ratio} Rim {rim_size}")
+
+
+db_manager: databaseManager = databaseManager("database")
+
+for line in scrape:
+      db_manager.create((width, aspect_ratio, rim_size), line)

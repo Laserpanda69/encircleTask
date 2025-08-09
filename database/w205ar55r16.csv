@@ -1,0 +1,235 @@
+website,brand,pattern,size,seasonality,price
+national.co.uk,Avon Tyres,ZV7,205/55 R16 91V,na,72.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 91V,na,92.99
+national.co.uk,Bridgestone Tyres,Turanza 6,205/55 R16 91V,na,98.99
+national.co.uk,Autogreen Tyres,Smart Chaser SC1,205/55 R16 91V,na,48.99
+national.co.uk,Autogreen Tyres,Super Sport Chaser SSC5,205/55 R16 94W,na,51.99
+national.co.uk,Autogreen Tyres,All Season AS2,205/55 R16 94V,all,56.99
+national.co.uk,Autogreen Tyres,Sport Chaser SC2,205/55 R16 91W,na,63.99
+national.co.uk,Autogreen Tyres,Super Sport Chaser SSC5,205/55 R16 91V,na,68.99
+national.co.uk,Autogreen Tyres,All Season AS2,205/55 R16 91V,all,72.99
+national.co.uk,Sailun Tyres,Atrezzo Elite,205/55 R16 91H,na,62.99
+national.co.uk,Sailun Tyres,Atrezzo Elite,205/55 R16 91V,na,64.99
+national.co.uk,Sailun Tyres,Atrezzo Elite,205/55 R16 91V,na,64.99
+national.co.uk,Sailun Tyres,Atrezzo Elite 2,205/55 R16 91V,na,64.99
+national.co.uk,Nankang Tyres,Nankang Eco-2+,205/55 R16 91V,na,68.99
+national.co.uk,Avon Tyres,ZV7,205/55 R16 91V,na,72.99
+national.co.uk,Nankang Tyres,Nankang AS-2+,205/55 R16 94V,na,72.99
+national.co.uk,Nankang Tyres,Nankang NA-1,205/55 R16 94V,na,73.99
+national.co.uk,Avon Tyres,ZV7,205/55 R16 91W,na,74.99
+national.co.uk,Nankang Tyres,Nankang AS-2+,205/55 R16 94W,na,76.99
+national.co.uk,Avon Tyres,AS7,205/55 R16 91V,na,83.99
+national.co.uk,Sailun Tyres,Atrezzo Elite,205/55 R16 91W,na,85.99
+national.co.uk,Sailun Tyres,Atrezzo Elite,205/55 R16 91W,na,85.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 91V,na,86.99
+national.co.uk,Avon Tyres,ZV7,205/55 R16 94W,na,87.99
+national.co.uk,Sailun Tyres,ATREZZO ZSR 2,205/55 R16 91Y,na,87.99
+national.co.uk,Avon Tyres,ZV7,205/55 R16 94V,na,88.99
+national.co.uk,Hankook Tyres,Kinergy Eco 2 K435,205/55 R16 91H,na,92.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 91H,na,92.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 91H,na,92.99
+national.co.uk,Hankook Tyres,Kinergy 435 Eco2,205/55 R16 91H,na,92.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 91W,na,95.99
+national.co.uk,Avon Tyres,WX7 Winter,205/55 R16 91H,winter,95.99
+national.co.uk,Sailun Tyres,Atrezzo ZSR,205/55 R16 91W,na,95.99
+national.co.uk,Avon Tyres,AS7,205/55 R16 94V,na,96.99
+national.co.uk,Sailun Tyres,Atrezzo 4 Seasons,205/55 R16 94V,na,96.99
+national.co.uk,Hankook Tyres,iON i*cept RS3,205/55 R16 91H,na,98.99
+national.co.uk,Hankook Tyres,Kinergy 4S2 H750,205/55 R16 94H,na,99.99
+national.co.uk,Avon Tyres,WX7 Winter,205/55 R16 94V,winter,100.99
+national.co.uk,Hankook Tyres,Kinergy 4S2 H750,205/55 R16 94V,na,103.99
+national.co.uk,Hankook Tyres,Kinergy 4S2 H750,205/55 R16 94V,na,103.99
+national.co.uk,Hankook Tyres,Kinergy 4S2 H750,205/55 R16 94H,na,106.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 94W,na,106.99
+national.co.uk,Hankook Tyres,iON i*cept RS3,205/55 R16 94H,na,106.99
+national.co.uk,Hankook Tyres,Ventus Prime 3 K125,205/55 R16 94H,na,109.99
+national.co.uk,Hankook Tyres,Ventus Prime 3 K125,205/55 R16 91W,na,115.99
+national.co.uk,Nankang Tyres,Nankang NS-2R,205/55 R16 94W,na,147.99
+national.co.uk,Hankook Tyres,Ventus Prime 4 K135,205/55 R16 94V,na,150.99
+national.co.uk,Hankook Tyres,Kinergy 4S2 H750,205/55 R16 94W,na,153.99
+national.co.uk,Hankook Tyres,Ventus Prime 3 K125,205/55 R16 94W,na,157.99
+national.co.uk,Hankook Tyres,Hankook iON ST AS,205/55 R16 94V,na,164.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 91V,na,81.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 91W,na,84.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 91V,na,89.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 94V,na,92.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91V,na,94.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91V,na,94.99
+national.co.uk,Pirelli Tyres,Cinturato All Season SF 2,205/55 R16 94V,all,94.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91V,na,95.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen 3,205/55 R16 91V,all,95.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 91V,na,95.99
+national.co.uk,Pirelli Tyres,Cinturato P7,205/55 R16 91V,na,95.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 91Y,na,96.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 91H,na,97.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 91W,na,97.99
+national.co.uk,Dunlop Tyres,SP Sport BluResponse,205/55 R16 91H,na,97.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91H,na,97.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91H,na,98.99
+national.co.uk,Bridgestone Tyres,Turanza 6,205/55 R16 91H,na,99.99
+national.co.uk,Bridgestone Tyres,Turanza Eco,205/55 R16 91H,na,100.99
+national.co.uk,Bridgestone Tyres,Turanza 6,205/55 R16 91W,na,100.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91W,na,101.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen 3,205/55 R16 94V,all,102.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91H,na,102.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91H,na,102.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91W,na,102.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91V,na,102.99
+national.co.uk,Michelin Tyres,Primacy 4+,205/55 R16 91V,na,102.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91V,na,103.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91H,na,103.99
+national.co.uk,Continental Tyres,ContiSportContact 2,205/55 R16 91V,na,103.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91W,na,103.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen-2,205/55 R16 94V,all,103.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen 3,205/55 R16 94V,all,103.99
+national.co.uk,Michelin Tyres,ePrimacy,205/55 R16 91V,na,103.99
+national.co.uk,Michelin Tyres,Primacy 4,205/55 R16 91H,na,103.99
+national.co.uk,Dunlop Tyres,All Season 2,205/55 R16 91V,all,104.99
+national.co.uk,Continental Tyres,UltraContact,205/55 R16 91W,na,104.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance,205/55 R16 91V,na,105.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 94V,na,105.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons,205/55 R16 94V,all,105.99
+national.co.uk,Bridgestone Tyres,Turanza ER300,205/55 R16 91V,na,105.99
+national.co.uk,Continental Tyres,PremiumContact 7,205/55 R16 91H,na,105.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91V,na,105.99
+national.co.uk,Continental Tyres,PremiumContact 7,205/55 R16 91V,na,106.99
+national.co.uk,Continental Tyres,All Season Contact 2,205/55 R16 91H,all,106.99
+national.co.uk,Continental Tyres,ContiPremiumContact 2,205/55 R16 91V,na,106.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91W,na,106.99
+national.co.uk,Bridgestone Tyres,Turanza ER300A,205/55 R16 91W,na,106.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen-2,205/55 R16 94H,all,106.99
+national.co.uk,Goodyear Tyres,EfficientGrip Performance 2,205/55 R16 94W,na,106.99
+national.co.uk,Continental Tyres,UltraContact,205/55 R16 91H,na,106.99
+national.co.uk,Dunlop Tyres,All Season 2,205/55 R16 94V,all,107.99
+national.co.uk,Dunlop Tyres,Sport Maxx TT,205/55 R16 91W,na,107.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91V,na,107.99
+national.co.uk,Bridgestone Tyres,Ecopia EP150,205/55 R16 91V,na,107.99
+national.co.uk,Michelin Tyres,CrossClimate +,205/55 R16 94V,na,107.99
+national.co.uk,Bridgestone Tyres,Turanza T005EV,205/55 R16 91V,na,108.99
+national.co.uk,Dunlop Tyres,Sport Maxx TT,205/55 R16 91W,na,108.99
+national.co.uk,Michelin Tyres,ePrimacy,205/55 R16 91H,na,108.99
+national.co.uk,Michelin Tyres,CrossClimate 2,205/55 R16 94V,na,108.99
+national.co.uk,Pirelli Tyres,Cinturato P7,205/55 R16 91W,na,109.99
+national.co.uk,Continental Tyres,UltraContact,205/55 R16 91V,na,110.99
+national.co.uk,Dunlop Tyres,Sport Maxx RT,205/55 R16 91W,na,110.99
+national.co.uk,Continental Tyres,All Season Contact 2,205/55 R16 94H,all,110.99
+national.co.uk,Goodyear Tyres,EfficientGrip,205/55 R16 91W,na,110.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91W,na,110.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 94V,na,110.99
+national.co.uk,Continental Tyres,ContiPremiumContact 5,205/55 R16 91W,na,111.99
+national.co.uk,Dunlop Tyres,Winter Sport 5,205/55 R16 91H,winter,111.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91H,na,112.99
+national.co.uk,Bridgestone Tyres,Weather Control A005 EVO,205/55 R16 91H,na,112.99
+national.co.uk,Michelin Tyres,CrossClimate +,205/55 R16 94V,na,112.99
+national.co.uk,Michelin Tyres,CrossClimate 3,205/55 R16 91H,na,112.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91W,na,113.99
+national.co.uk,Continental Tyres,All Season Contact 2,205/55 R16 94V,all,113.99
+national.co.uk,Continental Tyres,UltraContact,205/55 R16 94V,na,113.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen 3,205/55 R16 94V,all,113.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance 3,205/55 R16 91H,na,114.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance 3,205/55 R16 91T,na,114.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 94H,na,114.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91W,na,114.99
+national.co.uk,Michelin Tyres,CrossClimate 3,205/55 R16 91V,na,114.99
+national.co.uk,Michelin Tyres,Energy Saver +,205/55 R16 91V,na,114.99
+national.co.uk,Bridgestone Tyres,Turanza 6,205/55 R16 94V,na,115.99
+national.co.uk,Michelin Tyres,ePrimacy,205/55 R16 91W,na,115.99
+national.co.uk,Pirelli Tyres,Cinturato P7 P7C2,205/55 R16 91V,na,115.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91V,na,116.99
+national.co.uk,Dunlop Tyres,Sport Maxx RT,205/55 R16 91Y,na,117.99
+national.co.uk,Pirelli Tyres,Cinturato All Season SF3,205/55 R16 94V,all,117.99
+national.co.uk,Michelin Tyres,Primacy 3,205/55 R16 91V,na,117.99
+national.co.uk,Michelin Tyres,Michelin Primacy 5,205/55 R16 91H,na,117.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91V,na,118.99
+national.co.uk,Continental Tyres,AllSeasonContact,205/55 R16 91V,na,118.99
+national.co.uk,Pirelli Tyres,Cinturato P7,205/55 R16 91W,na,118.99
+national.co.uk,Continental Tyres,ContiEcoContact 5 SEAL,205/55 R16 94H,na,119.99
+national.co.uk,Bridgestone Tyres,Weather Control A005 EVO,205/55 R16 94V,na,119.99
+national.co.uk,Continental Tyres,All Season Contact 2,205/55 R16 94V,all,119.99
+national.co.uk,Michelin Tyres,ePrimacy,205/55 R16 94H,na,119.99
+national.co.uk,Michelin Tyres,Michelin ePrimacy S1,205/55 R16 94V,na,119.99
+national.co.uk,Michelin Tyres,CrossClimate 2,205/55 R16 91H,na,119.99
+national.co.uk,Michelin Tyres,Energy Saver,205/55 R16 91H,na,119.99
+national.co.uk,Continental Tyres,All Season Contact 2,205/55 R16 91V,all,120.99
+national.co.uk,Michelin Tyres,Primacy 4+,205/55 R16 91W,na,120.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 94V,na,121.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 94V,na,122.99
+national.co.uk,Dunlop Tyres,Winter Sport 5,205/55 R16 91T,winter,122.99
+national.co.uk,Goodyear Tyres,Vector 4Seasons Gen-2,205/55 R16 91V,all,122.99
+national.co.uk,Michelin Tyres,CrossClimate 2,205/55 R16 91V,na,122.99
+national.co.uk,Continental Tyres,ContiEcoContact 5,205/55 R16 91V,na,123.99
+national.co.uk,Bridgestone Tyres,Blizzak LM001,205/55 R16 91H,na,123.99
+national.co.uk,Bridgestone Tyres,Turanza T005 DriveGuard,205/55 R16 94W,na,123.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91H,na,123.99
+national.co.uk,Michelin Tyres,Michelin Primacy 5,205/55 R16 91W,na,123.99
+national.co.uk,Continental Tyres,eContact,205/55 R16 91R,na,124.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance 3,205/55 R16 94H,na,124.99
+national.co.uk,Dunlop Tyres,SP Winter Sport 4D,205/55 R16 91H,winter,124.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91W,na,124.99
+national.co.uk,Michelin Tyres,CrossClimate 2,205/55 R16 91W,na,124.99
+national.co.uk,Michelin Tyres,Primacy 4 S1,205/55 R16 91H,na,124.99
+national.co.uk,Michelin Tyres,Primacy 3,205/55 R16 91W,na,124.99
+national.co.uk,Bridgestone Tyres,Turanza 6 All Season,205/55 R16 94V,all,125.99
+national.co.uk,Bridgestone Tyres,Turanza T001,205/55 R16 91V,na,125.99
+national.co.uk,Pirelli Tyres,Cinturato All Season Plus,205/55 R16 91V,all,125.99
+national.co.uk,Bridgestone Tyres,Weather Control A005 Driveguard EVO,205/55 R16 94V,na,126.99
+national.co.uk,Continental Tyres,AllSeasonContact,205/55 R16 94H,na,127.99
+national.co.uk,Michelin Tyres,Primacy 4,205/55 R16 91W,na,127.99
+national.co.uk,Continental Tyres,WinterContact TS870,205/55 R16 91H,winter,128.99
+national.co.uk,Dunlop Tyres,Sport Maxx RT,205/55 R16 91W,na,128.99
+national.co.uk,Continental Tyres,WinterContact TS870,205/55 R16 91T,winter,129.99
+national.co.uk,Michelin Tyres,Michelin Primacy 5,205/55 R16 94V,na,129.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance,205/55 R16 91H,na,131.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 91W,na,131.99
+national.co.uk,Bridgestone Tyres,Turanza ER300A,205/55 R16 91W,na,132.99
+national.co.uk,Bridgestone Tyres,Turanza ER300,205/55 R16 91W,na,132.99
+national.co.uk,Continental Tyres,ContiPremiumContact,205/55 R16 91V,na,132.99
+national.co.uk,Continental Tyres,ContiWinterContact TS 830 P,205/55 R16 91H,winter,132.99
+national.co.uk,Michelin Tyres,Pilot Exalto PE2,205/55 R16 91Y,na,132.99
+national.co.uk,Michelin Tyres,Primacy 3,205/55 R16 91W,na,132.99
+national.co.uk,Michelin Tyres,Pilot Sport 4,205/55 R16 94Y,na,133.99
+national.co.uk,Continental Tyres,ContiWinterContact TS 830 P,205/55 R16 91H,winter,134.99
+national.co.uk,Pirelli Tyres,Cinturato All Season SF 2,205/55 R16 94V,all,134.99
+national.co.uk,Continental Tyres,WinterContact TS 860 S,205/55 R16 91H,winter,135.99
+national.co.uk,Michelin Tyres,Primacy 3,205/55 R16 91H,na,135.99
+national.co.uk,Michelin Tyres,Primacy 4+,205/55 R16 94H,na,135.99
+national.co.uk,Bridgestone Tyres,Turanza ER300,205/55 R16 91H,na,136.99
+national.co.uk,Continental Tyres,Ultra Contact NXT,205/55 R16 94W,na,137.99
+national.co.uk,Michelin Tyres,Energy Saver +,205/55 R16 94H,na,137.99
+national.co.uk,Continental Tyres,ContiEcoContact 6,205/55 R16 91W,na,138.99
+national.co.uk,Michelin Tyres,Michelin Alpin 7,205/55 R16 91T,na,138.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 94V,na,139.99
+national.co.uk,Michelin Tyres,Michelin Alpin 7,205/55 R16 91H,na,140.99
+national.co.uk,Michelin Tyres,Primacy 4+,205/55 R16 91H,na,141.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance 2,205/55 R16 91H,na,142.99
+national.co.uk,Michelin Tyres,Primacy 4,205/55 R16 94H,na,142.99
+national.co.uk,Michelin Tyres,Alpin 5,205/55 R16 91H,na,142.99
+national.co.uk,Michelin Tyres,Pilot Sport 4,205/55 R16 91W,na,142.99
+national.co.uk,Continental Tyres,WinterContact TS870,205/55 R16 94H,winter,144.99
+national.co.uk,Bridgestone Tyres,Ecopia EP150,205/55 R16 91V,na,146.99
+national.co.uk,Michelin Tyres,Primacy 4,205/55 R16 94V,na,146.99
+national.co.uk,Bridgestone Tyres,Turanza T005,205/55 R16 94W,na,147.99
+national.co.uk,Pirelli Tyres,Cinturato C3,205/55 R16 94V,na,149.99
+national.co.uk,Dunlop Tyres,SP Winter Sport 3D,205/55 R16 91H,winter,151.99
+national.co.uk,Michelin Tyres,Michelin Alpin 7,205/55 R16 94H,na,153.99
+national.co.uk,Dunlop Tyres,Winter Sport 5,205/55 R16 94H,winter,154.99
+national.co.uk,Bridgestone Tyres,Blizzak 6,205/55 R16 91H,na,155.99
+national.co.uk,Bridgestone Tyres,Blizzak LM001,205/55 R16 91H,na,156.99
+national.co.uk,Dunlop Tyres,Winter Sport 5,205/55 R16 94V,winter,160.99
+national.co.uk,Goodyear Tyres,UltraGrip Performance 3,205/55 R16 94V,na,164.99
+national.co.uk,Pirelli Tyres,Winter Sottozero 3,205/55 R16 91H,winter,164.99
+national.co.uk,Goodyear Tyres,UltraGrip 7 +,205/55 R16 91H,na,166.99
+national.co.uk,Continental Tyres,WinterContact TS870,205/55 R16 94V,winter,166.99
+national.co.uk,Michelin Tyres,Primacy 4+,205/55 R16 94V,na,169.99
+national.co.uk,Bridgestone Tyres,Blizzak 6,205/55 R16 94H,na,170.99
+national.co.uk,Dunlop Tyres,Sport,205/55 R16 91V,na,171.99
+national.co.uk,Pirelli Tyres,P Zero Rosso,205/55 R16 91Y,na,172.99
+national.co.uk,Pirelli Tyres,Powergy Winter,205/55 R16 91H,winter,176.99
+national.co.uk,Pirelli Tyres,Cinturato Winter 2,205/55 R16 91H,winter,183.99
+national.co.uk,Pirelli Tyres,Cinturato Winter 2,205/55 R16 94H,winter,183.99
+national.co.uk,Michelin Tyres,Alpin 5,205/55 R16 91H,na,189.99
+national.co.uk,Bridgestone Tyres,Blizzak 6,205/55 R16 94V,na,193.99
+national.co.uk,Continental Tyres,WinterContact TS 860,205/55 R16 94V,winter,196.99
+national.co.uk,Pirelli Tyres,Cinturato Winter 2,205/55 R16 91H,winter,203.99
+national.co.uk,Pirelli Tyres,Cinturato Winter 3,205/55 R16 94H,winter,209.99
+national.co.uk,Pirelli Tyres,Winter Sottozero 3,205/55 R16 91H,winter,235.99
