@@ -11,7 +11,7 @@ import sys
 # Needed information: website, brand, pattern, size, season, price
 
 NATIONAL_SEARCH_URL: str = "https://www.national.co.uk/tyres-search"
-BYTHJUL_SEARCH_URL: str = "https://www.bythjul.com/sok/storlek/dack/0/DS/205-55-16"
+BYTHJUL_SEARCH_URL: str = "https://www.bythjul.com/sok/storlek/dack/0/DS"
 SUMMER = "summer"
 WINTER = "winter"
 
@@ -65,7 +65,16 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
         
         scrape_results.append(("national.co.uk", brand, pattern, size, seasonality, price))
     return scrape_results
-            
+
+def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
+    scrape_results = []
+    
+    search_url = BYTHJUL_SEARCH_URL + f"/{width}-{aspect_ratio}-{rim_size}"
+
+    try:
+        response = requests.get(search_url)             
+    except:
+        return None            
         
 python_file, width, aspect_ratio, rim_size = sys.argv
 scrape = scrape_national(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
