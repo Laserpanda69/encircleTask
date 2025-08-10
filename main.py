@@ -106,5 +106,9 @@ if not scrape:
 
 db_manager: databaseManager = databaseManager("database")
 
-for line in scrape:
-      db_manager.create((width, aspect_ratio, rim_size), line)
+# for line in scrape:
+#       db_manager.create((width, aspect_ratio, rim_size), line)
+      
+print(
+    db_manager.read(tyre_info=(width, aspect_ratio, rim_size), index=7)
+    )

@@ -21,14 +21,14 @@ class databaseManager():
         # Creates the entry after the file it goes in has been insured to exist
         self.create_(file=file, line=line)
         
-    def read(self, tyre_info:tuple , index):
+    def read(self, tyre_info:tuple , index: int) -> tuple:
         file = f"w{tyre_info[0]}ar{tyre_info[1]}r{tyre_info[2]}.csv"
         
         # Returns none if a file for the requested tyre information does not exist (i.e. there are no entries)
         if not os.path.isfile(self.directory +"/"+file):
             return None
     
-        self.read_(file, index)
+        return self.read_(file, index)
 
     # update and delete have not been implemented as they are not needed, but are included to demonstrate database infrastructure 
 
@@ -47,8 +47,16 @@ class databaseManager():
         
     def read_(self, file:str , index:int):
         with open(self.directory + f"/{file}", 'r', newline='') as datafile:
-            writer = csv.reader(datafile)
-            return writer.read(index)
+            reader = csv.reader(datafile)
+            header_offset = 1
+            for i, line in enumerate(reader):
+                # header_offset is used to offset the 0 index from the header to the first tyre entry
+                if index == i+header_offset:
+                    return line
+            # List comprehention lines = [line for line in reader] was used initially
+            # However this was decided against as iterating through the whole reader
+            # Would be innefficient for large datasets and small search indexes
+                
         
     def make_file_for_dimensions_(self, file:str):
         print(file)
