@@ -20,6 +20,18 @@ WINTER = "winter"
 
 PROXY = "192.0.0.1:50"
 
+def find_seasonality(pattern: str):
+    if WINTER in pattern.lower():
+        return WINTER
+            
+    if SUMMER in pattern.lower():
+        return SUMMER
+            
+    if "4seasons" in pattern.lower() or "all season" in pattern.lower():
+        return "all"
+    
+    return "na"
+
 
 def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
     scrape_results = []
@@ -63,15 +75,7 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
         price = price.replace("€", "")
         price = price.strip()
         
-        seasonality = "na"
-        if WINTER in pattern.lower():
-            seasonality = WINTER
-            
-        if SUMMER in pattern.lower():
-            seasonality = SUMMER
-            
-        if "4seasons" in pattern.lower() or "all season" in pattern.lower():
-            seasonality = "all"
+        seasonality = find_seasonality(pattern = pattern)
         
         scrape_results.append(("national.co.uk", brand, pattern, size, seasonality, price))
     return scrape_results
@@ -128,15 +132,8 @@ def scrape_blackcircles(width, aspect_ratio, rim_size) -> list[tuple]:
         price = price.replace("€", "")
         price = price.strip()
         
-        seasonality = "na"
-        if WINTER in pattern.lower():
-            seasonality = WINTER
-            
-        if SUMMER in pattern.lower():
-            seasonality = SUMMER
-            
-        if "4seasons" in pattern.lower() or "all season" in pattern.lower():
-            seasonality = "all"
+        seasonality = find_seasonality(pattern = pattern)
+
         
         scrape_results.append(("blackcircles.com", brand, pattern, size, seasonality, price))
     return scrape_results
