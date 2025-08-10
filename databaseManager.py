@@ -8,18 +8,25 @@ class databaseManager():
         
         
     # public CRUD methods that check file exisits that call private methods that do not
+    # The database being used is made of a directory containing CSV files
+    # The CSV files are named after the width, aspect ratio, and rim size within
         
     def create(self, tyre_info: tuple, line:tuple):
         file = f"w{tyre_info[0]}ar{tyre_info[1]}r{tyre_info[2]}.csv"
-        print(file)
         
+        # If a tyre entry needs to be entered but the apprapriate file doesn't exist, creates the file
         if not os.path.isfile(self.directory +"/"+file):
             self.make_file_for_dimensions_(file)
             
+        # Creates the entry after the file it goes in has been insured to exist
         self.create_(file=file, line=line)
         
     def read(self, tyre_info:tuple , index):
         file = f"w{tyre_info[0]}ar{tyre_info[1]}r{tyre_info[2]}.csv"
+        
+        # Returns none if a file for the requested tyre information does not exist (i.e. there are no entries)
+        if not os.path.isfile(self.directory +"/"+file):
+            return None
     
         self.read_(file, index)
 
@@ -47,6 +54,7 @@ class databaseManager():
         print(file)
         with open(self.directory + f"/{file}", 'w', newline='') as datafile:
             writer = csv.writer(datafile)
+            # Writes the header into the datafile
             writer.writerow(["website", "brand", "pattern", "size", "seasonality", "price"])
     
     

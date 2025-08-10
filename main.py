@@ -23,6 +23,7 @@ PROXY = "192.0.0.1:50"
 def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
     scrape_results = []
     
+    
     search_url = NATIONAL_SEARCH_URL + f"/{width}-{aspect_ratio}-{rim_size}"
 
     try:
@@ -41,11 +42,14 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
         brand = brand_image.get('alt')   
         # there are then 4 <p>s which are the pattern, size, load index, speed rating, then a black <p>
         pattern = details.find_next('p')
+        # the <p> after the tyre pattern is the tyre size
         size = pattern.find_next('p')
         
+        # Extracts the pattern and size text from the <p> tags containing them
         pattern: str = pattern.text.strip()
         size:str = size.text.strip()
         
+        # The red text is the price text object on the page
         red_text = tyreresult.find('span', class_ = "red text-24")
         price:BeautifulSoup = red_text.find('strong')
         price:str = price.text
@@ -55,9 +59,7 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
         price = price.replace("€", "")
         price = price.strip()
         
-        # national does not give seasonality
         seasonality = "na"
-        
         if WINTER in pattern.lower():
             seasonality = WINTER
             
@@ -95,6 +97,9 @@ def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
 python_file, width, aspect_ratio, rim_size = sys.argv
 # scrape = scrape_bythjul(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
 scrape = scrape_national(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
+
+# If the scrape function has returned none it means no search results were found
+# Tested with W 185 AR 16 RS 14
 if not scrape:
     print(f"No search results for Width {width} AR {aspect_ratio} Rim {rim_size}")
 
