@@ -13,6 +13,7 @@ from selenium import webdriver
 # Needed information: website, brand, pattern, size, season, price
 
 NATIONAL_SEARCH_URL: str = "https://www.national.co.uk/tyres-search"
+BASE_BLACKCIRCLES_URL: str = "https://www.blackcircles.com/tyres"
 BYTHJUL_SEARCH_URL: str = "https://www.bythjul.com/sok/storlek/dack/0/DS"
 SUMMER = "summer"
 WINTER = "winter"
@@ -27,15 +28,18 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
     search_url = NATIONAL_SEARCH_URL + f"/{width}-{aspect_ratio}-{rim_size}"
 
     try:
+        # This is the only request made to the server, fufilling the ethical component of the task as 1 request is the minimum possible
         response = requests.get(search_url)             
     except:
         return None
     
     content = response.content
     soup = BeautifulSoup(content, 'html.parser')
+    # This element is the wrapper of all the tyres on the page
     all_tyreresults: BeautifulSoup = soup.find_all('div',class_ = "tyreresult")
     
     for tyreresult in all_tyreresults:
+        # This is the element containing the detials of the individual tyre
         details:BeautifulSoup = tyreresult.find('div', class_ = "details")
         # the only image in details is the brand image, which has alt text of the brand name
         brand_image = details.find('img')
@@ -72,7 +76,80 @@ def scrape_national(width, aspect_ratio, rim_size) -> list[tuple]:
         scrape_results.append(("national.co.uk", brand, pattern, size, seasonality, price))
     return scrape_results
 
+def scrape_blackcircles(width, aspect_ratio, rim_size) -> list[tuple]:
+    scrape_results = []
+    
+    
+    search_url = BASE_BLACKCIRCLES_URL + f"/{width}-{aspect_ratio}-{rim_size}"
 
+    try:
+        # This is the only request made to the server, fufilling the ethical component of the task as 1 request is the minimum possible
+        response = requests.get(search_url)             
+    except:
+        return None
+    
+    content = response.content
+    soup = BeautifulSoup(content, 'html.parser')
+    # This element is the wrapper of all the tyres on the page
+    deal_results_wrap: BeautifulSoup = soup.find_all('div',class_ = "deal-results-wrap")
+    
+    for deal_result in deal_results_wrap:
+        # This is the element containing the detials of the individual tyre
+        brand_spec_wrap:BeautifulSoup = deal_result.find('div', class_ = "brandSpecWrap")
+        # This anchor and header contain the brand, pattern, and size of the tyre
+        mode_size_wrap:BeautifulSoup = brand_spec_wrap.find('a', class_ = "modelSizeWrap")
+        infomation_header:BeautifulSoup = mode_size_wrap.find('h3', class_ = "modelSizeWrap")
+        
+        # This element contains the brand then the pattern of the tyre
+        tyre_name_wrap:BeautifulSoup = infomation_header.find('span', class_ = "tyreNameWrap")
+        model_size:BeautifulSoup = infomation_header.find('p', class_ = "model-size")
+        
+        tyre_brand_and_name:str = tyre_name_wrap.text
+        
+        # The brand is the first element of the string so this gets that out
+        brand = tyre_brand_and_name.split(' ')[0]
+        
+        # Cleanly removes the brand to isolate the name
+        pattern = tyre_brand_and_name.replace(brand, "").strip()
+
+        size = model_size.text
+        
+
+        pattern: str = pattern.text.strip()
+        size:str = size.text.strip()
+        
+        # The red text is the price text object on the page
+        red_text = tyreresult.find('span', class_ = "red text-24")
+        price:BeautifulSoup = red_text.find('strong')
+        price:str = price.text
+        # replace most common currency symbols with nothing so only number left
+        price = price.replace("£", "")
+        price = price.replace("$", "")
+        price = price.replace("€", "")
+        price = price.strip()
+        
+        seasonality = "na"
+        if WINTER in pattern.lower():
+            seasonality = WINTER
+            
+        if SUMMER in pattern.lower():
+            seasonality = SUMMER
+            
+        if "4seasons" in pattern.lower() or "all season" in pattern.lower():
+            seasonality = "all"
+        
+        scrape_results.append(("blackcircles.com", brand, pattern, size, seasonality, price))
+    return scrape_results
+
+
+# Dexel used html selected tags to load the selected tyres which cannot be loaded by a conventional url search
+# A branch (shop) must be selected so scrappign the entire stock seems undoable
+# My guess is the dexel uses URL masking as every webpage has the url https://www.dexel.co.uk/tyres#tyres
+# Using the network panel on inspect it seems there is only 1 tyres web page but javascript is used to hot load content to the page
+# This means a more sophisticaed approach would be nessasary to scrape data from Dexel, as dialouge needs to be populated, then scripts run, then data scraped.
+
+# bythjul is protected by cloudflare therefore this either need be bypassed, however "you must attempt to be ethical while scraping a website" is a specification of the task.
+# Therefore the better approch would be to find an API route, which falls outside of the scope of this task
 def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
     scrape_results = []
     
@@ -93,6 +170,9 @@ def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
     driver.close()
 
     print(soup.prettify())        
+  
+
+        
         
 python_file, width, aspect_ratio, rim_size = sys.argv
 # scrape = scrape_bythjul(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
