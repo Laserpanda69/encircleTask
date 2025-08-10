@@ -87,22 +87,24 @@ def scrape_blackcircles(width, aspect_ratio, rim_size) -> list[tuple]:
     search_url = BASE_BLACKCIRCLES_URL + f"/{width}-{aspect_ratio}-{rim_size}"
 
     try:
-        # This is the only request made to the server, fufilling the ethical component of the task as 1 request is the minimum possible
         response = requests.get(search_url)             
+        # This is the only request made to the server, fufilling the ethical component of the task as 1 request is the minimum possible
     except:
         return None
     
     content = response.content
     soup = BeautifulSoup(content, 'html.parser')
     # This element is the wrapper of all the tyres on the page
-    deal_results_wrap: BeautifulSoup = soup.find_all('div',class_ = "deal-results-wrap")
+    deal_results_wrap: BeautifulSoup = soup.find('div',class_ = "deal-results-wrap")
+    res_boxes = deal_results_wrap.find_all("div", class_=["resBox", "featured"])
+
     
-    for deal_result in deal_results_wrap:
-        # This is the element containing the detials of the individual tyre
-        brand_spec_wrap:BeautifulSoup = deal_result.find('div', class_ = "brandSpecWrap")
+    for i, res_box in enumerate(res_boxes):
+        brand_spec_wrap:BeautifulSoup = res_box.find('div', class_ = "brandSpecWrap")
+        
         # This anchor and header contain the brand, pattern, and size of the tyre
         mode_size_wrap:BeautifulSoup = brand_spec_wrap.find('a', class_ = "modelSizeWrap")
-        infomation_header:BeautifulSoup = mode_size_wrap.find('h3', class_ = "modelSizeWrap")
+        infomation_header:BeautifulSoup = mode_size_wrap.find('h3')
         
         # This element contains the brand then the pattern of the tyre
         tyre_name_wrap:BeautifulSoup = infomation_header.find('span', class_ = "tyreNameWrap")
@@ -116,24 +118,19 @@ def scrape_blackcircles(width, aspect_ratio, rim_size) -> list[tuple]:
         # Cleanly removes the brand to isolate the name
         pattern = tyre_brand_and_name.replace(brand, "").strip()
 
-        size = model_size.text
-        
-
-        pattern: str = pattern.text.strip()
-        size:str = size.text.strip()
+        size = model_size.text.strip()
         
         # The red text is the price text object on the page
-        red_text = tyreresult.find('span', class_ = "red text-24")
-        price:BeautifulSoup = red_text.find('strong')
-        price:str = price.text
-        # replace most common currency symbols with nothing so only number left
+        tyre_price:BeautifulSoup = res_box.find('div', class_ = "tyrePrice")
+        # The pounds of the price is the text of the <div>
+        price = tyre_price.text.strip()
+
         price = price.replace("£", "")
         price = price.replace("$", "")
         price = price.replace("€", "")
         price = price.strip()
         
         seasonality = find_seasonality(pattern = pattern)
-
         
         scrape_results.append(("blackcircles.com", brand, pattern, size, seasonality, price))
     return scrape_results
@@ -166,7 +163,6 @@ def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
     soup = BeautifulSoup(driver.page_source, "html")
     driver.close()
 
-    print(soup.prettify())        
   
 
         
@@ -174,18 +170,16 @@ def scrape_bythjul(width, aspect_ratio, rim_size) -> list[tuple]:
 python_file, width, aspect_ratio, rim_size = sys.argv
 # scrape = scrape_bythjul(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
 scrape = scrape_national(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
+scrape += scrape_blackcircles(width=width, aspect_ratio=aspect_ratio, rim_size=rim_size)
 
 # If the scrape function has returned none it means no search results were found
 # Tested with W 185 AR 16 RS 14
-if not scrape:
-    print(f"No search results for Width {width} AR {aspect_ratio} Rim {rim_size}")
+# if not scrape:
+#     print(f"No search results for Width {width} AR {aspect_ratio} Rim {rim_size}")
 
 
 db_manager: databaseManager = databaseManager("database")
 
-# for line in scrape:
-#       db_manager.create((width, aspect_ratio, rim_size), line)
+for line in scrape:
+      db_manager.create((width, aspect_ratio, rim_size), line)
       
-print(
-    db_manager.read(tyre_info=(width, aspect_ratio, rim_size), index=7)
-    )
